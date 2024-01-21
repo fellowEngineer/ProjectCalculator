@@ -22,3 +22,29 @@ public:
     {
     }
 };
+
+
+int main()
+{
+
+    std::string inputExpression = "2+2";
+    while (!inputExpression.empty())
+    {
+        std::cout << "calc> ";
+        std::getline(std::cin, inputExpression);
+
+        try
+        {
+            Calculator calculator(inputExpression);
+            std::cout << "Result is : " << calculator.calculate();
+        }
+        catch (const std::exception &e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+
+        std::cout << std::endl;
+    }
+
+    return 0;
+}

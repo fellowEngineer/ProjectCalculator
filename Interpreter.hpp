@@ -30,5 +30,7 @@ public:
         return 0;
     }
 
-    ~Interpreter();
+    ~Interpreter()
+    {
+    }
 };
