@@ -5,7 +5,7 @@
 // #include <vector>
 #include <stdexcept>
 
-#include  "Token.hpp"
+#include "Token.hpp"
 
 class Tokenizer
 {

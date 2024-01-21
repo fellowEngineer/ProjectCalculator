@@ -1,13 +1,12 @@
 #pragma once;
 
-#include "LexicalAnalyser.hpp"
-
+#include "Token.hpp"
 
 class Parser
 {
 public:
     Parser() : Tokens({}) {}
-    Parser(std::vector<Token>& inputTokens) : Tokens(inputTokens) {}
+    Parser(std::vector<Token> &inputTokens) : Tokens(inputTokens) {}
 
     double Parse()
     {
@@ -23,7 +22,6 @@ public:
             Token::Type currentTokenType = currentToken.getTokenType();
             std::string currentTokenValue = currentToken.getTokenValue();
 
-            
             if (currentTokenType == Token::Type::INTEGER)
             {
                 double value = stod(currentTokenValue);
@@ -40,7 +38,6 @@ public:
 
                 else
                     error();
-                
             }
             else
             {
@@ -61,4 +58,3 @@ protected:
 private:
     std::vector<Token> Tokens;
 };
-

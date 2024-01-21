@@ -55,4 +55,4 @@ private:
 };
 
 // defination of static variable
-std::vector<std::string> Token::typeStr = {"INTEGER", "ADDITION","SUBTRACTION","MULTIPLICATION","DIVISION", "NONE"};
+std::vector<std::string> Token::typeStr = {"INTEGER", "ADDITION", "SUBTRACTION", "MULTIPLICATION", "DIVISION", "NONE"};
